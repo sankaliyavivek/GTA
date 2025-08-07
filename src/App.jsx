@@ -129,77 +129,80 @@ function App() {
       </div>
 
       {
-        showContent && (
-          <div className='main w-full rotate-[-10deg] scale-[1.7] '>
+        
+          showContent && (
+          <div className='main w-full rotate-[-10deg] scale-[1.7] md:scale-[1.5] lg:scale-[1.2]'>
             <div className='landing relative overflow-hidden w-full h-screen bg-black'>
-              <div className='navbar absolute top-0 left-0 z-[10]  w-full py-10 px-10 '>
-                <div className='logo flex gap-6 '>
-                  <div className='lines flex flex-col gap-2 '>
-                    <div className='line w-15 h-1 bg-white'></div>
-                    <div className='line w-8 h-1 bg-white'></div>
-                    <div className='line w-5 h-1 bg-white'></div>
-                  </div>
-                  <h2 className='text-4xl -mt-[10px] leading-none text-white'>Rockstar</h2>
-                </div>
 
+              {/* Navbar */}
+              <div className='navbar absolute top-0 left-0 z-[10] w-full py-6 px-4 md:px-10'>
+                <div className='logo flex gap-4 md:gap-6 items-center'>
+                  <div className='lines flex flex-col gap-1'>
+                    <div className='line w-6 h-1 bg-white'></div>
+                    <div className='line w-4 h-1 bg-white'></div>
+                    <div className='line w-3 h-1 bg-white'></div>
+                  </div>
+                  <h2 className='text-2xl md:text-4xl text-white'>Rockstar</h2>
+                </div>
               </div>
 
-              <div className='imagesdiv text relative w-full h-screen '>
-                <img src="./sky.png" className='absolute sky scale-[1.3] rotate-[-20deg] top-0 left-0 w-full h-full object-cover' alt="" />
-                <img src="./bg.png" className='absolute bg scale-[1.4] rotate-[-3deg] top-0 left-0 w-full h-full object-cover' alt="" />
+              {/* Images and Text */}
+              <div className='imagesdiv relative w-full h-screen text-white'>
+                <img src="./sky.png" className='absolute sky scale-[1.2] md:scale-[1.3] rotate-[-20deg] top-0 left-0 w-full h-full object-cover' alt="" />
+                <img src="./bg.png" className='absolute bg scale-[1.2] md:scale-[1.4] rotate-[-3deg] top-0 left-0 w-full h-full object-cover' alt="" />
 
-                <div className='text absolute text-white top-10 left-1/2 -translate-x-1/2'>
-                  <h1 className='text-[7rem] leading-none  -ml-10'>grand</h1>
-                  <h1 className='text-[7rem] leading-none  ml-10'>theft</h1>
-                  <h1 className='text-[7rem] leading-none  -ml-5'>auto</h1>
-
+                {/* GTA Text */}
+                <div className='text absolute top-16 left-1/2 -translate-x-1/2 text-center'>
+                  <h1 className='text-[3rem] sm:text-[4rem] md:text-[6rem] lg:text-[7rem] leading-none -ml-4'>grand</h1>
+                  <h1 className='text-[3rem] sm:text-[4rem] md:text-[6rem] lg:text-[7rem] leading-none ml-4'>theft</h1>
+                  <h1 className='text-[3rem] sm:text-[4rem] md:text-[6rem] lg:text-[7rem] leading-none -ml-2'>auto</h1>
                 </div>
 
-
+                {/* Character Image */}
                 <img
                   src="./girlbg.png"
                   alt=""
-                  className="absolute character scale-[3] rotate-[-20deg]  bottom-[-150%] left-1/2 -translate-x-1/2 w-[400px] max-w-full h-auto"
+                  className="absolute character scale-[2] sm:scale-[2.5] md:scale-[3] rotate-[-20deg] bottom-[-100%] left-1/2 -translate-x-1/2 w-[200px] sm:w-[300px] md:w-[400px] h-auto"
                 />
 
-                <div className='btmbar text-white absolute bottom-0 left-0 w-full py-10 px-10 bg-gradient-to-t from-black to-transparent'>
-                  <div className=''>
-                    <div className='flex gap-4 items-center'>
-                      <i className="text-3xl ri-arrow-down-line"></i>
-                      <h3 className='text-1xl'>Scroll Down</h3>
+                {/* Bottom bar */}
+                <div className='btmbar absolute bottom-0 left-0 w-full py-6 px-4 md:px-10 bg-gradient-to-t from-black to-transparent'>
+                  <div className='flex justify-between items-center'>
+                    <div className='flex gap-3 items-center'>
+                      <i className="text-2xl md:text-3xl ri-arrow-down-line"></i>
+                      <h3 className='text-base md:text-xl'>Scroll Down</h3>
                     </div>
-                    <img className='h-[40px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2' src="./ps5.png" alt="" />
+                    <img className='h-8 sm:h-10' src="./ps5.png" alt="" />
                   </div>
                 </div>
               </div>
-
-
             </div>
 
-            <div className='w-full  h-screen flex bg-black px-10  items-center justify-center'>
-              <div className='contar flex text-white w-full h-[80%] '>
-                <div className='limg relative w-1/2 h-full'>
-                  <img className=' absolute w-[300px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2   scale-[1.2] ' src="./imag.png" alt="" />
+            {/* Second Section */}
+            <div className='w-full h-auto md:h-screen flex flex-col md:flex-row bg-black px-6 md:px-10 py-10 items-center justify-center'>
+              <div className='contar flex flex-col md:flex-row text-white w-full max-w-screen-xl gap-10'>
+
+                {/* Left Image */}
+                <div className='limg relative w-full md:w-1/2 h-[300px] md:h-full flex justify-center items-center'>
+                  <img className='w-[200px] sm:w-[250px] md:w-[300px] scale-[1.2]' src="./imag.png" alt="" />
                 </div>
 
-                <div className='rg w-[30%]'>
-                  <h1 className='text-3xl'>Still Running,</h1>
-                  <h1 className='text-3xl'>Not Hunting</h1>
-                  <p className='mt-10 text-xl'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit voluptatibus quia id fuga eaque nisi quisquam repellat, porro voluptates sequi optio necessitatibus adipisci.</p>
-                  <p className='mt-3 text-xl'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis inventore odio natus quisquam.</p>
-                  <p className='mt-3 text-xl'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit voluptatibus quia id fuga eaque nisi quisquam repellat, porro voluptates sequi optio necessitatibus adipisci.</p>
-
-                  <button className='bg-yellow-500 py-3 px-3 text-2xl text-black mt-10'>Download Now</button>
+                {/* Right Text */}
+                <div className='rg w-full md:w-[40%]'>
+                  <h1 className='text-2xl md:text-3xl'>Still Running,</h1>
+                  <h1 className='text-2xl md:text-3xl'>Not Hunting</h1>
+                  <p className='mt-4 md:mt-6 text-base md:text-xl'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit voluptatibus quia id fuga eaque nisi quisquam repellat, porro voluptates sequi optio necessitatibus adipisci.</p>
+                  <p className='mt-2 text-base md:text-xl'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis inventore odio natus quisquam.</p>
+                  <p className='mt-2 text-base md:text-xl'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit voluptatibus quia id fuga eaque nisi quisquam repellat, porro voluptates sequi optio necessitatibus adipisci.</p>
+                  <button className='bg-yellow-500 py-2 px-4 md:py-3 md:px-6 text-lg md:text-2xl text-black mt-6'>Download Now</button>
                 </div>
 
               </div>
-
-
             </div>
-
-
           </div>
         )
+      
+
       }
     </>
   )
