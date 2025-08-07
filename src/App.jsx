@@ -35,7 +35,7 @@ function App() {
   })
 
   useGSAP(() => {
-
+ document.body.classList.add('overflow-x-hidden');
     if (!showContent) return;
 
     gsap.to(".main", {
