@@ -35,7 +35,7 @@ function App() {
   })
 
   useGSAP(() => {
- document.body.classList.add('overflow-x-hidden');
+    document.body.classList.add('overflow-x-hidden');
     if (!showContent) return;
 
     gsap.to(".main", {
@@ -65,7 +65,7 @@ function App() {
     gsap.to(".character", {
       scale: 1.2,
       x: "0%",
-      bottom: "-30%",
+      bottom: "-40%",
       rotate: 0,
       duration: 2,
       delay: "-.8",
@@ -129,8 +129,8 @@ function App() {
       </div>
 
       {
-        
-          showContent && (
+
+        showContent && (
           <div className='main w-full rotate-[-10deg] scale-[1.7] md:scale-[1.5] lg:scale-[1.2]'>
             <div className='landing relative overflow-hidden w-full h-screen bg-black'>
 
@@ -152,12 +152,18 @@ function App() {
                 <img src="./bg.png" className='absolute bg scale-[1.2] md:scale-[1.4] rotate-[-3deg] top-0 left-0 w-full h-full object-cover' alt="" />
 
                 {/* GTA Text */}
-                <div className='text absolute top-16 left-1/2 -translate-x-1/2 text-center'>
+                {/* <div className='text absolute top-10 left-1/2 -translate-x-1/2 text-center'>
                   <h1 className='text-[3rem] sm:text-[4rem] md:text-[6rem] lg:text-[7rem] leading-none -ml-4'>grand</h1>
                   <h1 className='text-[3rem] sm:text-[4rem] md:text-[6rem] lg:text-[7rem] leading-none ml-4'>theft</h1>
                   <h1 className='text-[3rem] sm:text-[4rem] md:text-[6rem] lg:text-[7rem] leading-none -ml-2'>auto</h1>
-                </div>
+                </div> */}
 
+                <div className='text absolute text-white top-10 left-1/2 -translate-x-1/2'>
+                  <h1 className='text-[3rem] sm:text-[4rem] md:text-[6rem] lg:text-[7rem] leading-none  -ml-10'>grand</h1>
+                  <h1 className='text-[3rem] sm:text-[4rem] md:text-[6rem] lg:text-[7rem] leading-none  ml-10'>theft</h1>
+                  <h1 className='text-[3rem] sm:text-[4rem] md:text-[6rem] lg:text-[7rem] leading-none  -ml-5'>auto</h1>
+
+                </div>
                 {/* Character Image */}
                 <img
                   src="./girlbg.png"
@@ -201,7 +207,7 @@ function App() {
             </div>
           </div>
         )
-      
+
 
       }
     </>
